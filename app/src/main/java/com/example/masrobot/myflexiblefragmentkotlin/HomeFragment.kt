@@ -1,16 +1,12 @@
 package com.example.masrobot.myflexiblefragmentkotlin
 
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
 /**
@@ -22,8 +18,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater!!.inflate(R.layout.fragment_home, container, false)
-        val btnCategory = view.findViewById<Button>(R.id.btn_category)
-        btnCategory.setOnClickListener(this)
+        view.btn_category.setOnClickListener(this)
         return view
     }
 
