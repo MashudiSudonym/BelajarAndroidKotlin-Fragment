@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_ini_home_fragment">Hello Ini Home Fragment</string>
     <string name="ke_halaman_category">Ke Halaman Category</string>
+    <string name="ini_halaman_category">Ini halaman Category</string>
+    <string name="kategory_lifestyle">Kategory Lifestyle</string>
 </resources>

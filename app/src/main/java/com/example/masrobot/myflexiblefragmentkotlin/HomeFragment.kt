@@ -22,14 +22,20 @@ class HomeFragment : Fragment(), View.OnClickListener {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater!!.inflate(R.layout.fragment_home, container, false)
-        val btnCategory = view.findViewById<View>(R.id.btn_category) as Button
+        val btnCategory = view.findViewById<Button>(R.id.btn_category)
         btnCategory.setOnClickListener(this)
         return view
     }
 
-    override fun onClick(v: View) {
-        if (v.id == R.id.btn_category) {
-            Toast.makeText(activity, "test", Toast.LENGTH_SHORT).show()
+    override fun onClick(v: View?) {
+        if (v?.id == R.id.btn_category) {
+            val mCategoryFragment = CategoryFragment()
+            val mFragmentManager = fragmentManager
+            val mFragmentTransaction = mFragmentManager.beginTransaction()
+            mFragmentTransaction.replace(R.id.frame_container, mCategoryFragment,
+                    mCategoryFragment.javaClass.simpleName)
+            mFragmentTransaction.addToBackStack(null)
+            mFragmentTransaction.commit()
         }
     }
 }// Required empty public constructor

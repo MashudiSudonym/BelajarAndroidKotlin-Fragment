@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val mFragmentManager = supportFragmentManager
         val mFragmentTransaction = mFragmentManager.beginTransaction()
-        val mHomeFragment= HomeFragment()
+        val mHomeFragment = HomeFragment()
         mFragmentTransaction.add(R.id.frame_container, mHomeFragment,
                 mHomeFragment.javaClass.simpleName)
 
