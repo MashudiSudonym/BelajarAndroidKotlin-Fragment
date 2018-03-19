@@ -7,4 +7,14 @@
     <string name="ke_halaman_category">Ke Halaman Category</string>
     <string name="ini_halaman_category">Ini halaman Category</string>
     <string name="kategory_lifestyle">Kategory Lifestyle</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="ke_halaman_activity">Ke Halaman Activity</string>
+    <string name="tampilkan_sebuah_dialog">Tampilkan sebuah dialog</string>
+    <string name="sir_alex_ferguesion">Sir Alex Ferguesion</string>
+    <string name="louis_van_gaal">Louis Van Gaal</string>
+    <string name="david_moyes">David Moyes</string>
+    <string name="jose_mourinho">Jose Mourinho</string>
+    <string name="tutup">Tutup</string>
+    <string name="pilih">Pilih</string>
 </resources>

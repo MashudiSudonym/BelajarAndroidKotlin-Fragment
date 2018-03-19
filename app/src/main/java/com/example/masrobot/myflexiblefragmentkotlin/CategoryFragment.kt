@@ -6,10 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_category.view.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
 /**
@@ -27,7 +24,19 @@ class CategoryFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v?.id == R.id.btn_detail_category) {
-            Toast.makeText(activity, "Testing", Toast.LENGTH_SHORT).show()
+            val mDetailCategoryFragment = DetailCategoryFragment()
+            val mBundle = Bundle()
+            mBundle.putString(mDetailCategoryFragment.EXTRA_NAME, "Lifestyle")
+            val description = "Kategori ini akan berisi produk-produk lifestyle"
+            mDetailCategoryFragment.arguments = mBundle
+            mDetailCategoryFragment.description = description
+
+            val mFragmentManager = fragmentManager
+            val mFragmentTransaction = mFragmentManager.beginTransaction()
+            mFragmentTransaction.replace(R.id.frame_container, mDetailCategoryFragment,
+                    DetailCategoryFragment::class.java.simpleName)
+            mFragmentTransaction.addToBackStack(null)
+            mFragmentTransaction.commit()
         }
     }
 
